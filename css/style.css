@@ -1,0 +1,151 @@
+:root {
+  --BGCOLOR: papayawhip;
+  --FCOLOR: mediumslateblue;
+  --FFAMILY: "Courier New", Courier, monospace;
+  --FS480: 1rem;
+  --FS481: 1.2rem;
+  --FS769: 1.4rem;
+  --FS1025: 1.6rem;
+  --FS1201: 1.8rem;
+  --FSTXT: 1.5rem;
+  --FWEIGHT1: 500;
+  --FWEIGHT2: 700;
+  --FWEIGHT3: 800;
+  --MG1: 1.5rem;
+  --MG2: 3rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+body {
+  max-width: 70%;
+  min-height: 100vh;
+  margin: auto;
+  background-color: var(--BGCOLOR);
+  color: var(--FCOLOR);
+  font-family: var(--FFAMILY);
+  font-size: var(--FS1201);
+  font-weight: var(--FWEIGHT1);
+  display: grid;
+  place-items: center;
+}
+
+main {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin: var(--MG2) 0;
+  text-align: center;
+  min-width: 100%;
+}
+
+.word_counter {
+  min-width: 60vw;
+  min-height: 35vw;
+}
+
+.word_counter p {
+  font-weight: var(--FWEIGHT2);
+  margin-bottom: var(--MG1);
+  white-space: nowrap;
+}
+
+.textarea {
+  font-size: var(--FSTXT);
+  font-family: inherit;
+  font-weight: var(--FWEIGHT1);
+  color: inherit;
+  background-color: inherit;
+  resize: none;
+  border: 3px solid var(--FCOLOR);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  margin-bottom: var(--MG2);
+}
+
+.textarea:focus {
+  outline-color: var(--FFAMILY);
+}
+
+.textarea::placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.container > * {
+  flex: 1;
+}
+
+footer {
+  text-align: center;
+  min-width: 100%;
+  margin-top: var(--MG2);
+}
+
+footer p {
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    font-size: var(--FS480);
+  }
+  .textarea {
+    height: 20rem;
+  }
+}
+
+@media screen and (min-width: 481px) {
+  body {
+    font-size: var(--FS481);
+  }
+  .textarea {
+    height: 23rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  body {
+    font-size: var(--FS769);
+  }
+  .textarea {
+    height: 26rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  body {
+    font-size: var(--FS1025);
+  }
+  .textarea {
+    height: 29rem;
+  }
+}
+@media screen and (min-width: 1201px) {
+  body {
+    font-size: var(--FS1201);
+  }
+  .textarea {
+    height: 32rem;
+  }
+}
